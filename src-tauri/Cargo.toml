@@ -1,0 +1,29 @@
+[package]
+name = "parkplatz"
+version = "0.1.0"
+description = "Parkplatz — Kontext-Merker für Entwickler"
+authors = ["Parkplatz"]
+edition = "2021"
+rust-version = "1.77"
+
+[lib]
+name = "parkplatz_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon"] }
+tauri-plugin-global-shortcut = "2"
+tauri-plugin-notification = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rusqlite = { version = "0.31", features = ["bundled"] }
+git2 = "0.19"
+notify = "6"
+chrono = { version = "0.4", features = ["serde"] }
+
+[dev-dependencies]
+serde_json = "1"
+chrono = "0.4"

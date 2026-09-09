@@ -1,0 +1,137 @@
+:root {
+    --color-bg: #f6f7f9;
+    --color-surface: #ffffff;
+    --color-border: #d9dee7;
+    --color-text: #1a2233;
+    --color-text-muted: #6b7484;
+    --color-primary: #1d4ed8;
+    --color-primary-hover: #1e40af;
+    --color-danger: #b91c1c;
+    --color-danger-hover: #991b1b;
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.app-header {
+    padding: var(--space-4) var(--space-5);
+    border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-surface);
+}
+
+.app-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.app-main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-5);
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.quick-input {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.input {
+    flex: 1;
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font-size: 15px;
+    outline: none;
+}
+
+.input:focus {
+    border-color: var(--color-primary);
+}
+
+.toolbar {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.btn {
+    padding: var(--space-2) var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    border-color: var(--color-text-muted);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+}
+
+.btn-danger {
+    background-color: var(--color-danger);
+    border-color: var(--color-danger);
+    color: #ffffff;
+}
+
+.btn-danger:hover {
+    background-color: var(--color-danger-hover);
+    border-color: var(--color-danger-hover);
+}
+
+.notes-list {
+    min-height: 120px;
+    padding: var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background-color: var(--color-surface);
+}
+
+.empty-state {
+    margin: var(--space-5) 0;
+    text-align: center;
+    color: var(--color-text-muted);
+}
