@@ -3,6 +3,8 @@
     --color-surface: #ffffff;
     --color-border: #d9dee7;
     --color-text: #1a2233;
+    --color-text-muted: #6b7484;
+    --color-primary: #1d4ed8;
     --space-2: 8px;
     --space-3: 12px;
     --radius-md: 8px;
@@ -41,4 +43,14 @@ body {
     color: var(--color-text);
     font-size: 15px;
     outline: none;
+    caret-color: var(--color-primary);
+}
+
+.overlay-input::placeholder {
+    color: var(--color-text-muted);
+}
+
+.overlay-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(29, 78, 216, 0.15);
 }
