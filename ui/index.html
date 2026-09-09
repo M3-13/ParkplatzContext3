@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parkplatz</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="app-header">
+        <h1 class="app-title">Parkplatz</h1>
+    </header>
+
+    <main class="app-main">
+        <section class="quick-input">
+            <input
+                type="text"
+                id="quick-input"
+                class="input"
+                placeholder="Notiz eingeben…"
+                autocomplete="off"
+            />
+            <button id="quick-save" class="btn btn-primary" type="button">Parken</button>
+        </section>
+
+        <section class="search">
+            <input
+                type="search"
+                id="search-input"
+                class="input"
+                placeholder="Zettel durchsuchen…"
+                autocomplete="off"
+            />
+        </section>
+
+        <section class="toolbar">
+            <button id="export-btn" class="btn" type="button">Exportieren</button>
+            <button id="delete-all-btn" class="btn btn-danger" type="button">Alles löschen</button>
+        </section>
+
+        <section id="notes-list" class="notes-list" aria-live="polite">
+            <p class="empty-state">Noch keine Zettel vorhanden.</p>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
